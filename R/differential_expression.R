@@ -101,7 +101,7 @@ FindMarkers <- function(
     logfc.threshold <- 0
   }
   # in case the user passed in cells instead of identity classes
-  if (length(x = as.vector(x = ident.1) > 1) && any(as.character(x = ident.1) %in% object@cell.names)) {
+  if (length(x = as.vector(x = ident.1)) > 1 && any(as.character(x = ident.1) %in% object@cell.names)) {
     cells.1 <- intersect(x = ident.1, y = object@cell.names)
   } else {
     cells.1 <- WhichCells(object = object, ident = ident.1)
